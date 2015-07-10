@@ -69,7 +69,7 @@ public class SFTemplateT1 extends AbstractTemplateHandlerT1 implements ISFTempla
 	public static class HeaderPageT1 extends AbstractHeaderPage {
 
 		@Override
-		protected void onForward(final PageParameter pp) {
+		protected void onForward(final PageParameter pp) throws Exception {
 			super.onForward(pp);
 
 			pp.addImportCSS(SFTemplateT1.class, "/t1.css");

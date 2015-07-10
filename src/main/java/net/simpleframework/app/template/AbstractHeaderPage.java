@@ -16,7 +16,7 @@ import net.simpleframework.organization.web.page.attri.AbstractEditAwarePage;
 public abstract class AbstractHeaderPage extends AbstractEditAwarePage {
 
 	@Override
-	protected void onForward(final PageParameter pp) {
+	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
 
 		addComponent_logout(pp);
