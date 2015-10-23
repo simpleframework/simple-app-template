@@ -18,7 +18,6 @@ public abstract class AbstractHeaderPage extends AbstractEditAwarePage {
 	@Override
 	protected void onForward(final PageParameter pp) throws Exception {
 		super.onForward(pp);
-
 		addComponent_logout(pp);
 	}
 
