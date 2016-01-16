@@ -5,7 +5,7 @@ import java.util.Map;
 
 import net.simpleframework.common.web.html.HtmlConst;
 import net.simpleframework.mvc.AbstractMVCPage;
-import net.simpleframework.mvc.IMVCConst;
+import net.simpleframework.mvc.MVCConst;
 import net.simpleframework.mvc.PageParameter;
 import net.simpleframework.mvc.common.element.BlockElement;
 import net.simpleframework.mvc.common.element.SpanElement;
@@ -61,7 +61,7 @@ public class SFTemplateT1 extends AbstractTemplateHandlerT1 implements ISFTempla
 		sb.append(BlockElement.CLEAR);
 		sb.append(HtmlConst.TAG_SCRIPT_START);
 		sb.append("$ready(function() { $('idSFTemplateT1_loadTime').innerHTML = document.getCookie('")
-				.append(IMVCConst.PAGELOAD_TIME).append("'); });");
+				.append(MVCConst.PAGELOAD_TIME).append("'); });");
 		sb.append(HtmlConst.TAG_SCRIPT_END);
 		return sb.toString();
 	}
