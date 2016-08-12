@@ -14,25 +14,27 @@ import net.simpleframework.mvc.template.t2.AbstractTemplateHandlerT2;
 /**
  * Licensed under the Apache License, Version 2.0
  * 
- * @author 陈侃(cknet@126.com, 13910090885) https://github.com/simpleframework
+ * @author 陈侃(cknet@126.com, 13910090885)
+ *         https://github.com/simpleframework
  *         http://www.simpleframework.net
  */
 public class SFTemplateT2 extends AbstractTemplateHandlerT2 implements ISFTemplateConst {
 	@Override
-	public Class<? extends AbstractMVCPage> getHeaderPage() {
+	public Class<? extends AbstractMVCPage> getHeaderPage(final AbstractMVCPage templatePage) {
 		return HeaderPageT2.class;
 	}
 
 	@Override
-	public Class<? extends AbstractMVCPage> getFooterPage() {
+	public Class<? extends AbstractMVCPage> getFooterPage(final AbstractMVCPage templatePage) {
 		return FooterPageT2.class;
 	}
 
 	@Override
-	public MenuItems getMainMenuItems(final ComponentParameter cp, final MenuItem menuItem) {
+	public MenuItems getMainMenuItems(final ComponentParameter cp, final MenuItem menuItem,
+			final AbstractMVCPage templatePage) {
 		// 覆盖此函数更改T2模板的菜单数据
 		// 父类根据装载模块自动组装菜单
-		return super.getMainMenuItems(cp, menuItem);
+		return super.getMainMenuItems(cp, menuItem, templatePage);
 	}
 
 	protected String toHeaderHtml(final PageParameter pp) {
