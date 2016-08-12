@@ -1,6 +1,7 @@
 package net.simpleframework.app.template;
 
 import static net.simpleframework.common.I18n.$m;
+
 import net.simpleframework.mvc.PageParameter;
 import net.simpleframework.mvc.common.element.AbstractElement;
 import net.simpleframework.mvc.common.element.LinkElementEx;

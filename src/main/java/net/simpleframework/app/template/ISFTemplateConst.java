@@ -10,11 +10,11 @@ import net.simpleframework.mvc.common.element.LinkElement;
  */
 public interface ISFTemplateConst {
 
-	static LinkElement SF_LINK = LinkElement.BLANK("http://simpleframework.net").setHref(
-			"http://simpleframework.net");
+	static LinkElement SF_LINK = LinkElement.BLANK("http://simpleframework.net")
+			.setHref("http://simpleframework.net");
 
-	static LinkElement CHROME_LINK = LinkElement.BLANK("Chrome").setHref(
-			"http://www.google.com/chrome/");
+	static LinkElement CHROME_LINK = LinkElement.BLANK("Chrome")
+			.setHref("http://www.google.com/chrome/");
 
 	static LinkElement FIREFOX_LINK = LinkElement.BLANK("Firefox").setHref("http://firefox.com.cn/");
 }

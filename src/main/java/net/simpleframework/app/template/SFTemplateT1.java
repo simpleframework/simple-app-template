@@ -18,26 +18,28 @@ import net.simpleframework.mvc.template.t1.AbstractTemplateHandlerT1;
 /**
  * Licensed under the Apache License, Version 2.0
  * 
- * @author 陈侃(cknet@126.com, 13910090885) https://github.com/simpleframework
+ * @author 陈侃(cknet@126.com, 13910090885)
+ *         https://github.com/simpleframework
  *         http://www.simpleframework.net
  */
 public class SFTemplateT1 extends AbstractTemplateHandlerT1 implements ISFTemplateConst {
 
 	@Override
-	public Class<? extends AbstractMVCPage> getHeaderPage() {
+	public Class<? extends AbstractMVCPage> getHeaderPage(final AbstractMVCPage templatePage) {
 		return HeaderPageT1.class;
 	}
 
 	@Override
-	public Class<? extends AbstractMVCPage> getFooterPage() {
+	public Class<? extends AbstractMVCPage> getFooterPage(final AbstractMVCPage templatePage) {
 		return FooterPageT1.class;
 	}
 
 	@Override
-	public MenuItems getMainMenuItems(final ComponentParameter cp, final MenuItem menuItem) {
+	public MenuItems getMainMenuItems(final ComponentParameter cp, final MenuItem menuItem,
+			final AbstractMVCPage templatePage) {
 		// 覆盖此函数更改T1模板的菜单数据
 		// 父类根据装载模块自动组装菜单
-		return super.getMainMenuItems(cp, menuItem);
+		return super.getMainMenuItems(cp, menuItem, templatePage);
 	}
 
 	protected String toHeaderHtml(final PageParameter pp) {
@@ -54,8 +56,8 @@ public class SFTemplateT1 extends AbstractTemplateHandlerT1 implements ISFTempla
 		sb.append(SF_LINK).append("</div>");
 		sb.append("	<div class='lr'>");
 		sb.append(CHROME_LINK).append(", ").append(FIREFOX_LINK);
-		sb.append("#(FooterPage.0) [ ").append(
-				new SpanElement().setId("idSFTemplateT1_loadTime").addStyle("color: #900;"));
+		sb.append("#(FooterPage.0) [ ")
+				.append(new SpanElement().setId("idSFTemplateT1_loadTime").addStyle("color: #900;"));
 		sb.append("&nbsp;s ]");
 		sb.append(" </div>");
 		sb.append(BlockElement.CLEAR);
